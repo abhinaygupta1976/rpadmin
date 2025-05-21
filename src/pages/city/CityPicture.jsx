@@ -63,8 +63,7 @@ export const CityPicture = () => {
           errorMessage: response.data.Message,
         };
         dispatchCityPictureGet({
-          type: AXIOS_ACTION_TYPE.AXIOS_ERROR,
-          payload: { apiErrors: errors },
+          type: AXIOS_ACTION_TYPE.AXIOS_RESET,
         });
         if (response.data.StatusCode === 401) {
           setLoggedIn(false);
